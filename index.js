@@ -47,4 +47,4 @@ if(message.content.startsWith("!status")) {
   }
 }
 });
-client.login('NDI3MTA1NTU4NDM3Mjk4MTc4.DZfskA.kyMQ6FjjPwtR9IULTfl8wDt9lIs');
+client.login(process.env.TOKEN);
