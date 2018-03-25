@@ -32,7 +32,7 @@ if(message.content == "?leave") {
   }
 }
 if(message.content == "?owner leave") {
-  if (message.author.id == "254273544689680386"){
+  if (message.author.id == "254273544689680386" || message.author.id == "265789273070895104"){
 message.guild.voiceConnection.disconnect();
   }
 }
@@ -46,5 +46,16 @@ if (message.author.id == "254273544689680386" || message.author.id == "265789273
     message.channel.send("niet voor jouw");
   }
 }
+if(message.content.startsWith("?play")) {
+        message.reply('laat het feest maar beginnen!! :)');
+  var str = message.content;
+  var link = str.substr(8);
+  const streamOptions = { seek: 0, volume: 1 };
+  message.member.voiceChannel.join()    .then(connection => {
+      const stream = ytdl(link, { filter : 'audioonly' });
+      const dispatcher = connection.playStream(stream, streamOptions);
+    })
+    .catch(console.error);
+  }
 });
 client.login(process.env.TOKEN);
