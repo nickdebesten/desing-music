@@ -37,7 +37,7 @@ message.guild.voiceConnection.disconnect();
   }
 }
 if(message.content.startsWith("!status")) {
-  if (message.author.id == "254273544689680386"){
+if (message.author.id == "254273544689680386" || message.author.id == "265789273070895104"){
       var str = message.content;
       var status = str.substr(7);
       client.user.setActivity(status, { type: 'LISTENING'});
