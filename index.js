@@ -57,5 +57,8 @@ if(message.content.startsWith("?play")) {
     })
     .catch(console.error);
   }
+    if (message.content === '?invite') {
+    message.reply('hier heb je de link om mij toe te voegen aan je server !https://discordapp.com/oauth2/authorize?client_id=427105558437298178&scope=bot als je niks hoort join dan deze discord voor hulp! https://discord.gg/sXzxZK6');
+  }
 });
 client.login(process.env.TOKEN);
