@@ -17,7 +17,7 @@ if (message.content === '?join') {
     message.member.voiceChannel.join()
       .then(connection => { // Connection is an instance of VoiceConnection
         message.reply('laat het feest maar beginnen!! :)');
-        connection.playStream("http://stream.radiocorp.nl/web10_mp3");
+        connection.playStream("http://stream.radiocorp.nl/web10_aac");
       })
       .catch(console.log);
   } else {
